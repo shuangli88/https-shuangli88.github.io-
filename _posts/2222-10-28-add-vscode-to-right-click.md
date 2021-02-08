@@ -1,15 +1,9 @@
 ---
 layout: post
-
 title: House Dems ask Trump to testify under oath in Senate trial
-
 categories: House Dems ask Trump to testify under oath in Senate trial
-
-
 description: Kevin,Leader,McCarthy
 keywords: Kevin,Leader,McCarthy
-
-
 ---
 
 
