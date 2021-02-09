@@ -1,99 +1,13 @@
 ---
 layout: post
-title: 青蛙跳台阶的问题——Fibonacci
+title: 测试1212青蛙跳台阶的问题——Fibonacci
 categories: Algorithm
 description: 使用 Fibonacci 来解决青蛙跳台阶的问题。
 keywords: 算法，Fibonacci
 ---
 
-这几天正在复习算法，今天在看一篇文章时偶然看到这个题目，想了一下居然没什么思路……（抱歉，实在太菜。)，文章中提示了一个关键词：Fibonacci 数列。然后我又小百度了一下，找了一个具体分析实例，结合两处，这才理清了思路。（汗啊……基础全忘光了，这以后咋办啊……深感担忧……)
-
-### 问题描述
-
-一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级台阶，请问这只青蛙跳上 n 级的台阶总共有多少种跳法？
-
-### 问题分析
-
-设青蛙跳上 n 级台阶的跳法为 f(n) 种。
-
-设 Fibonacci 数列的第 x 项值为 fibo(x)。
-
-1. 当 n=1 时，f(n)=1=fibo(2)
-2. 当 n=2 时，f(n)=2=fibo(3)
-3. 当 n>2 时，分析可知，在跳上第 n 级台阶前一步，必然是在第 (n-1) 或 (n-2) 级台阶，故有 f(n) = f(n-1) + f(n-2); 依此类推……
-
-则有：
-
-<del>f(n)</del>  
-<del>= f(n-1) + f(n-2)</del>  
-<del>= 2f(n-2) + f(n-3)</del>  
-<del>= 3f(n-3) + 2f(n-4)</del>  
-<del>= 5 f(n-4) + 3f(n-5)</del>  
-<del>= 8f(n-5) + 5f(n-6)</del>  
-<del>= ...</del>  
-<del>= fibo(x+1)f(n-x)+fibo(x)f(n-(x+1))</del>  
-<del>=...</del>  
-<del>= fibo(n-1)f(n-(n-2)) + fibo(n-2)f(n-(n-1))</del>  
-<del>= fibo(n-1)f(2) + fibo(n-2)f(1)</del>  
-
-f(n) 的规律符合 Fibonacci 数列的规律，它与 Fibonacci 的区别是 Fibonacci 的前两个元素是 1，1，而 f(n) 的规律是 1，2，即可知有 `f(n)=fibo(n+1)`。
-
-### 简单的 C++ 实现
-
-```cpp
-#include <iostream>
-using namespace std;
-
-// 非递归写法
-int fibo(int n)  // 获取 Fibonacci 数列的第 N 项值
-{
-    if(n == 1 || n == 2)
-        return 1;
-    else
-    {
-        int a = 1;
-        int b = 1;
-        int tmp;
-        for(int i = 3; i <= n; ++ i)
-        {
-            tmp = a;
-            a = b;
-            b += tmp;
-        }
-        return b;
-    }
-}
-
-//// 递归写法
-//int fibo(int n)
-//{
-//    if(n == 1 || n == 2)
-//        return 1;
-//    else
-//        return fibo(n-1) + fibo(n-2);
-//}
-
-int main()
-{
-    cout << "请输入楼梯的级数：";
-
-    int n;
-    cin >> n;
-
-    int sum;
-
-    //if(1==n)
-    //    sum = 1;
-    //else if (2==n)
-    //    sum = 2;
-    //else
-    //{
-    //    sum = 2 * fibo(n-1) + fibo(n-2);
-    //}
-    sum = fibo(n+1);
-
-    cout << "共有 " << sum << " 种跳法。" << endl;
-
-    return 0;
-}
-```
+           <center><img style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px" src="images/2021-02-09-5myxi3pgrxk.jpg" /></center>
+<p class="picture" style="font-size: 13px; font-family: Times New Roman; color: #999; margin-top: 3px">Participants attend the 33rd ordinary session of the assembly of heads of State and Government of the African Union in Addis Ababa, Ethiopia's capital, Feb. 9, 2020. (Xinhua/Michael Tewelde)</p>African leaders are expected to focus on the continent's COVID-19 response at a virtual summit this weekend, as well as pressing security crises that have been overlooked during the pandemic.<br /><br />The two-day African Union (AU) summit comes almost exactly one year after Egypt recorded the first case of COVID-19 in Africa, prompting widespread fears that member states' weak health systems would quickly be overwhelmed.<br /><br />But despite early doomsday predictions, the continent has so far been hit less hard than other regions, recording 3.5 percent of global virus cases and 4 percent of global deaths, according to the Africa Centres for Disease Control and Prevention (Africa CDC).<br /><br />Today, though, many African countries are battling damaging second waves while straining to procure sufficient vaccine doses.<br /><br />"The developed North, which has substantial financial resources, has purchased the largest stocks, while we in Africa are still struggling to get our fair share," South African foreign minister Naledi Pandor said Wednesday in remarks opening a pre-summit meeting of AU foreign ministers.<br /><br />Member states will also hold internal elections to lead a restructured executive body - the results of which will shape how the AU responds to the pandemic and a host of economic and security challenges.<br /><br />Security crises, meanwhile, include a three-month-old conflict in the AU's host country Ethiopia and longer-running quagmires in the Sahel and elsewhere.<br /><br />"We hope that the summit will present an opportunity for African leaders to refocus their attention on a number of conflicts and crises that have had attention diverted away from them, due to the logical focus on COVID[-19] in the last year," said Imogen Hooper, AU analyst for the International Crisis Group (ICG).<br /><br />South African President Cyril Ramaphosa will deliver a pandemic response update during the closed portion of the summit Saturday, according to a draft program seen by AFP.<br /><br />African leaders are speaking out against hoarding by rich countries at the expense of poorer ones.<br /><br />"There is a vaccine nationalism on the rise, with other rich countries jumping the queue, some even pre-ordering more than they require," said Moussa Faki Mahamat, chairman of the AU's executive body, the AU Commission, in a recent interview the AU posted online.<br /><br />AFP <br>
+          
+        
+        
