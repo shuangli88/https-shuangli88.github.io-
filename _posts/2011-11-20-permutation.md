@@ -1,0 +1,23 @@
+---
+layout: post
+title: 简单的全排列算法实现 
+categories: Algorithm
+description: 一种使用递归思路实现的简易全排列算法。
+keywords: 算法, 全排列, 递归
+---
+
+### 问题描述
+
+实现一个简单的全排列算法，以整形数组{1,2,3,4,5}为例，假设元素无重复。
+ 
+### 问题分析
+
+如果用多层循环来实现，那么……有多少个元素将需要有多少层循环，这样作为实现一个算法的角度来看显然是不可取的。
+
+以 a[] = {1,2,3,4,5}为例，它的全排列是
+
+<center><img style="border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px" src="images/2021-02-09-5myxi3pgrxk.jpg" /></center>
+<p class="picture" style="font-size: 13px; font-family: Times New Roman; color: #999; margin-top: 3px">Participants attend the 33rd ordinary session of the assembly of heads of State and Government of the African Union in Addis Ababa, Ethiopia's capital, Feb. 9, 2020. (Xinhua/Michael Tewelde)</p>African leaders are expected to focus on the continent's COVID-19 response at a virtual summit this weekend, as well as pressing security crises that have been overlooked during the pandemic.<br /><br />The two-day African Union (AU) summit comes almost exactly one year after Egypt recorded the first case of COVID-19 in Africa, prompting widespread fears that member states' weak health systems would quickly be overwhelmed.<br /><br />But despite early doomsday predictions, the continent has so far been hit less hard than other regions, recording 3.5 percent of global virus cases and 4 percent of global deaths, according to the Africa Centres for Disease Control and Prevention (Africa CDC).<br /><br />Today, though, many African countries are battling damaging second waves while straining to procure sufficient vaccine doses.<br /><br />"The developed North, which has substantial financial resources, has purchased the largest stocks, while we in Africa are still struggling to get our fair share," South African foreign minister Naledi Pandor said Wednesday in remarks opening a pre-summit meeting of AU foreign ministers.<br /><br />Member states will also hold internal elections to lead a restructured executive body - the results of which will shape how the AU responds to the pandemic and a host of economic and security challenges.<br /><br />Security crises, meanwhile, include a three-month-old conflict in the AU's host country Ethiopia and longer-running quagmires in the Sahel and elsewhere.<br /><br />"We hope that the summit will present an opportunity for African leaders to refocus their attention on a number of conflicts and crises that have had attention diverted away from them, due to the logical focus on COVID[-19] in the last year," said Imogen Hooper, AU analyst for the International Crisis Group (ICG).<br /><br />South African President Cyril Ramaphosa will deliver a pandemic response update during the closed portion of the summit Saturday, according to a draft program seen by AFP.<br /><br />African leaders are speaking out against hoarding by rich countries at the expense of poorer ones.<br /><br />"There is a vaccine nationalism on the rise, with other rich countries jumping the queue, some even pre-ordering more than they require," said Moussa Faki Mahamat, chairman of the AU's executive body, the AU Commission, in a recent interview the AU posted online.<br /><br />AFP <br>
+          
+        
+        
