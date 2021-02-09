@@ -1,3 +1,5 @@
+---
+layout: post
 title: African Union to convene
 categories: 默认分类
 tags: [day,AU,year,overlooked,pandemic]
