@@ -1,7 +1,9 @@
 ---
-layout: post
 title: Myanmar military forms state administration council
-categories: world
+date: 2020-03-28 00:00:00 +08:00
+categories:
+- world
+layout: post
 description: Myanmar military forms state administration council
 keywords: formation,membered,Services,announced,State
 ---
